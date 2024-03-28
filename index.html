@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            border:2px solid ;
+            height: 200px;
+            width: 200px;
+            display: flex;
+            background-color: darkseagreen;
+            justify-content: center;
+            align-items: center; 
+            position: relative;  
+            left: 40%;
+            margin-top: 200px;
+        }
+        .b1:active~ .box{
+            transform: translateX(200px);
+        }
+        button{
+            position: relative;
+            left: 30%;
+            top: 50px;
+            margin-left: 55px;
+            border: none;
+            border: 2px solid transparent;
+            box-shadow: 0 0 10px aqua;
+            background-color: aqua;
+        }
+        body{
+           background-color: black;
+        }
+        .b2:active~ .box{
+            transform: scale(2);
+        }
+        .b3:active~ .box{
+            transform: skew(160deg);
+        }
+        .b4:active~ .box{
+            transform: rotate(120deg);
+        }
+    </style>
+</head>
+<body>
+    <button class="b1">translate</button>
+    <button class="b2">scale</button>
+    <button class="b3">skew</button>
+    <button class="b4">rotate</button>
+    <div class="box">Transforms</div>
+</body>
+</html>
